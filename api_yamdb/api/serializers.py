@@ -3,12 +3,11 @@ from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework_simplejwt.tokens import AccessToken
-
 from api_yamdb.settings import EMAIL_MAX_LENGTH, USERNAME_MAX_LENGTH
-
 from reviews.models import Title, Genre, Category, Comment, Review
-from reviews.validators import validate_year, validate_username, \
-    MultilineUsernameValidator
+from reviews.validators import (
+    validate_year, validate_username, MultilineUsernameValidator
+)
 from reviews.models import User
 
 
