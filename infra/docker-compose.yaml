@@ -14,7 +14,7 @@ services:
       - .env
 
   web:
-    build: ../api_yamdb/
+    image: machulinvya4eslav/api_yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
