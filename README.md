@@ -1,3 +1,6 @@
+https://github.com/machulin-vya4eslav/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+
+
 # API_YAMDB
 REST API проект для сервиса YaMDb — сбор отзывов о фильмах, книгах или музыке.
 
@@ -10,7 +13,7 @@ REST API проект для сервиса YaMDb — сбор отзывов о
 
 Клонируем репозиторий и переходим в него:
 ```bash
-git clone https://github.com/machulin-vya4eslav/infra_sp2
+git clone https://github.com/machulin-vya4eslav/yamdb_final
 cd infra_sp2
 cd api_yamdb
 ```
