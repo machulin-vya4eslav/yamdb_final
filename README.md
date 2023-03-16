@@ -1,4 +1,4 @@
-https://github.com/machulin-vya4eslav/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+![workflow_status](https://github.com/machulin-vya4eslav/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
 # API_YAMDB
