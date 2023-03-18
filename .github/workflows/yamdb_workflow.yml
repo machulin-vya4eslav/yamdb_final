@@ -59,6 +59,7 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
+            sudo docker image prune -a
             sudo docker pull machulinvya4eslav/api_yamdb:latest
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} > .env
