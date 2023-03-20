@@ -11,7 +11,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'abrakadabra')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False)
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split()
+# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split()
+ALLOWED_HOSTS = ['158.160.33.35', 'web:8000', 'web']
 
 # Application definition
 
