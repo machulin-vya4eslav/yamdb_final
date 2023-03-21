@@ -57,7 +57,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull machulinvya4eslav/api_yamdb:latest
+            sudo docker pull machulinvya4eslav/api_yamdb
             sudo docker-compose stop
             sudo docker-compose rm -f web
             touch .env
