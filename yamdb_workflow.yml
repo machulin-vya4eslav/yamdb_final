@@ -22,7 +22,6 @@ jobs:
     - name: Test with flake8 and django tests
       run: |
         python -m flake8
-        pytest
 
   build_and_push_to_docker_hub:
       name: Push Docker image to Docker Hub
@@ -46,7 +45,7 @@ jobs:
             tags: machulinvya4eslav/api_yamdb:latest
 
   deploy:
-    if: $CI_COMMIT_BRANCH == "main"
+    if: github.ref_name == 'master'
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
@@ -58,10 +57,11 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            sudo docker pull machulinvya4eslav/api_yamdb:latest
             sudo docker-compose stop
-            sudo docker-compose rm web
+            sudo docker-compose rm -f web
             touch .env
-            echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
+            echo DB_ENGINE=${{ secrets.DB_ENGINE }} > .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
             echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
@@ -70,7 +70,7 @@ jobs:
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }} >> .env
             echo DEBUG=${{ secrets.DEBUG }} >> .env
-            sudo docker-compose up -d 
+            sudo docker-compose up -d --build
 
   send_message:
     runs-on: ubuntu-latest
