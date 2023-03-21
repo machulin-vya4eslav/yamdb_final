@@ -42,7 +42,7 @@ jobs:
           with:
             push: true
             context: ./api_yamdb/
-            tags: machulinvya4eslav/api_yamdb:v1
+            tags: machulinvya4eslav/api_yamdb:latest
 
   deploy:
     if: github.ref_name == 'master'
@@ -57,7 +57,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull machulinvya4eslav/api_yamdb:v1
+            sudo docker pull machulinvya4eslav/api_yamdb:latest
             sudo docker-compose stop
             sudo docker-compose rm -f web
             touch .env

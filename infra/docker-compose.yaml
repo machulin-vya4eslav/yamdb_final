@@ -14,7 +14,7 @@ services:
       - .env
 
   web:
-    image: machulinvya4eslav/api_yamdb:v1
+    image: machulinvya4eslav/api_yamdb:latest
     restart: always
     volumes:
       - type: volume
