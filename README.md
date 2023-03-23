@@ -1,8 +1,12 @@
 ![workflow_status](https://github.com/machulin-vya4eslav/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
+
 # API_YAMDB
 REST API проект для сервиса YaMDb — сбор отзывов о фильмах, книгах или музыке.
+
+## Образ проекта
+Образ проекта доступен по ссылке https://hub.docker.com/r/machulinvya4eslav/api_yamdb
 
 ## Описание
 
