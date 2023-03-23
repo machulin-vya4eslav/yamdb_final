@@ -46,7 +46,7 @@ jobs:
             tags: machulinvya4eslav/api_yamdb:latest
 
   deploy:
-    if: github.ref_name == 'origin/master'
+    if: github.ref_name == 'master'
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
