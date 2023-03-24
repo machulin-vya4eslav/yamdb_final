@@ -1,5 +1,7 @@
 ![workflow_status](https://github.com/machulin-vya4eslav/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+Проект доступен по адресу http://158.160.33.35
+
 
 
 # API_YAMDB
